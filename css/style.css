@@ -175,6 +175,7 @@ a {
         font-weight: bold;
         color: var(--text-color);
         transition: var(--main-transition);
+        display: block;
     }
     .header .container .links ul li a:hover {   
         color: var(--main-color);
