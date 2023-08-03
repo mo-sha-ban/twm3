@@ -1,0 +1,1472 @@
+/* Start Global Rules */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #2196f3;;
+    --back-color: #080321; 
+    --sec-back-color: #051726;
+    --text-color:white;
+    --sec-text-color:#e3e3e3;
+    --main-transition: 0.5s;
+    --main-padding:100px;
+} 
+
+
+
+html {
+    scroll-behavior: smooth;
+    color: white;
+}
+
+body {
+    font-family: 'Marhey', cursive;
+    background-image: linear-gradient(134deg, var(--back-color) 0%, var(--sec-back-color) 100%);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+/* ---------------responsive--------------- */
+
+/* small */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+    }
+    /* medium */
+    @media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+    }
+    /* large */
+    @media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+    }
+    /*X-large */
+    @media (min-width:1400px) {
+    .container {
+        width: 1370px;
+    }
+    
+}
+
+
+.main-title {
+    position: relative;
+}
+.main-title h1 {
+    color: var(--main-color);
+    font-size: 100px;
+    text-align: center;
+    padding: var(--main-padding);
+    opacity: 25%;
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.main-title::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--main-color);
+    content: attr(title);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+    .main-title h1 {
+        font-size: 90px;
+    }
+    .main-title::after {
+        font-size: 45px;
+    }
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+    .main-title h1 {
+        font-size: 80px;
+        padding: 60px;
+    }
+    .main-title::after {
+        font-size: 40px;
+    }
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+    .main-title h1 {
+        font-size: 45px;
+        padding: 40px;
+    }
+    .main-title::after {
+        font-size: 30px;
+    }
+}
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+    .main-title h1 {
+        font-size: 35px;
+    }
+    .main-title::after {
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+
+/* End Global Rules */
+
+
+
+
+
+    /* Start header  */
+    
+    .header {
+        padding: 10px;
+        position: sticky;
+        top: 10px;
+        width: 95%;
+        margin: auto;
+        z-index: 10;
+        background-color: var(--sec-back-color);
+        border-radius: 10px;
+    }
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header .container .logo img {
+        width: 150px;
+    }
+    .header .container .links ul {
+        display: flex;
+    }
+    .header .container .links ul li  a {
+        margin: 10px;
+        padding: 10px;
+        font-size: 23px;
+        font-weight: bold;
+        color: var(--text-color);
+        transition: var(--main-transition);
+    }
+    .header .container .links ul li a:hover {   
+        color: var(--main-color);
+    }
+    .header .container .links ul .blog {
+        margin: 10px;
+        padding: 4px 10px;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: var(--text-color);
+        color: var(--main-color);
+        border-radius: 10px;
+    }
+    .header .container i {
+        font-size: 30px;
+        margin: 5px;
+    }
+    .bars {
+        display: none;
+        font-size: 30px;
+        transition: var(--main-transition);
+        cursor: pointer;
+    }
+    .bars:hover {
+        transform: scale(1.2);
+    }
+    .show {
+        position: absolute;
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        border-radius: 20px;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+        text-align: center;
+        z-index: 100;
+        background-image: url(back.png);
+        backdrop-filter: blur(5px)!important;
+        height: 100vh;
+    }
+
+    .show ul {
+        flex-direction: column;
+    }
+    .show ul li {
+        margin: 20px;
+    }
+
+.show  ul li a {
+    color: var(--text-color);
+    background-color: var(--back-color);
+    border-radius: 10px;
+    padding: 10px 20px !important;
+
+    transition: var(--main-transition);
+}
+
+.show  ul li:hover a {
+    margin-right: 20px;
+}
+.show .blog {
+    color: var(--back-color)!important;
+}
+.show  ul li a:hover {
+    color: var(--main-color)!important;
+}
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 100;
+    background-color: var(--text-color);
+    color: red;
+    border-radius: 6px;
+    transition: var(--main-transition);
+    padding: 5px;
+    display: none;
+}
+.close:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.showx{
+    display: block!important;
+}
+
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------  large   -------------------------------------------- */
+    @media (max-width: 1200px) {
+        .header .container .links ul li  a {
+            font-size: 23px;
+        }
+        .header .container .logo img {
+            width: 125px;
+        }
+    }
+
+/*-------------------------------------------------------- medium --------------------------------------------- */
+    @media (max-width: 991px) {
+        .bars {
+            display: block;
+        }
+        .header .container .links {
+            display: none;
+        }
+        /* .links {
+            display: none;
+        } */
+        .header .container .logo img {
+            width: 100px;
+        }
+    }
+
+/*----------------------------------------------------- small ------------------------------------------------*/
+    @media (max-width:767px) {
+        .header .container .logo img {
+            width: 90px;
+        }
+        .header .container i {
+            font-size: 25px;
+            margin: 5px;
+        }
+    }
+/*----------------------------------------------- very-small (fold) -----------------------------------------*/
+    @media (max-width:350px) {
+        .header .container .logo img {
+            width: 80px;
+        }
+        .header .container i {
+            font-size: 20px;
+            margin: 5px;
+        }
+    }
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+/* End header  */
+
+
+
+
+
+
+
+
+
+
+/* <!-- this is nav bar  --> */
+
+
+/* ** i'm used this nav to make balanced gradient  between navbar and landing page  */
+
+nav {
+    background-image: linear-gradient( 180deg, #042465 0%, rgba(62, 125, 255, 0) 100% );
+    z-index: -2;
+
+}
+
+
+/* <!-- this is nav bar  --> */
+
+
+
+
+
+
+/* Start Landing Page  */
+.landing {
+    padding: var(--main-padding) 10px;
+}
+.landing .container .text {
+    position: relative;
+    /* z-index: 1; */
+    text-align: center;
+    width: 600px;
+    margin: auto;
+}
+.landing .container .text h1 {
+    font-size: 45px;
+    line-height: 1.5;
+}
+.landing .container .text h1::first-line {
+    color: var(--main-color);
+}
+.landing .container .text p {
+    margin: auto;
+    font-size: 30px;
+    color: var(--sec-text-color);
+}
+.landing .container .social {
+    margin: 30px;
+}
+.landing .container .social ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.landing .container .social img {
+    width: 50px;
+    background-color: white;
+    padding: 1px;
+    margin: 8px;
+    border-radius: 8px;
+    transition: var(--main-transition);
+}
+.landing .container .social img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 30px -5px;
+}
+.landing .container .btn a {
+    display: block;
+    /* z-index: 1; */
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    color: var(--main-color);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px 20px;
+    width: fit-content;
+    transition: var(--main-transition);
+}
+.landing .container  a:hover {
+    transform: scale(1.2);
+}
+.landing .shape .shape1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.landing .shape .shape2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+.shape .shape1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.shape .shape2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+    .landing .container .text h1 {
+        font-size: 40px;
+    }
+    .landing .container .text p {
+        font-size: 25px;
+    }
+    .landing .container .social img {
+        width: 45px;
+    }
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+    .landing .container .text h1 {
+        font-size: 37px;
+    }
+    .landing .container .text p {
+        font-size: 23px;
+    }
+    .landing .container .social img {
+        width: 40px;
+    }
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+    .landing .container .text  {
+        width: auto;
+    }
+    .landing .container .text h1 {
+        font-size: 32px;
+    }
+    .landing .container .text p {
+        font-size: 21px;
+    }
+    .landing .container .social img {
+        width: 35px;
+    }
+}
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+    .landing .container .text h1 {
+        font-size: 20px;
+    }
+    .landing .container .text p {
+        font-size: 18px;
+    }
+    .landing .container .social img {
+        width: 30px;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+/* End Landing Page  */
+
+
+
+
+
+
+
+
+
+
+
+/* Start students  */
+.students .text h1 {
+    margin: 40px 80px; 
+    padding: 40px;
+    text-align: center;
+    font-size: 40px;
+    border: 4px solid var(--sec-text-color);
+    border-width: 5px 0px;
+}
+.students .text h1 span {
+    color: var(--main-color);
+    font-size: 45px;
+}
+
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+    .students .text h1 {
+        margin: 40px 80px; 
+        font-size: 33px;
+    }
+    .students .text h1 span {
+        font-size: 38px;
+    }
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+    .students .text h1 {
+        font-size: 25px;
+    }
+    .students .text h1 span {
+        font-size: 30px;
+    }
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+    .students .text h1 {
+        margin: 40px 30px; 
+        font-size: 25px;
+        line-height: 2;
+    }
+    .students .text h1 span {
+        font-size: 27px;
+    }
+}
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+    .students .text h1 {
+        margin: 40px 20px;
+        padding: 20px;
+        font-size: 18px;
+        line-height: 2;
+    }
+    .students .text h1 span {
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+
+/* End students  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Features  */
+.features {
+    padding: var(--main-padding) 0px;
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    gap: 70px;
+}
+
+.features .container .box .info {
+    text-align: center;
+}
+.features .container .box .info i {
+    font-size: 50px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+.features .container .box .info h2 {
+    font-size: 35px;
+}
+.features .container .box .info p {
+    color: var(--sec-text-color);
+}
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+    .features .container {
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+        gap: 60px;
+    }
+    .features .container .box .info i {
+        font-size: 40px;
+        border-radius: 15px;
+    }
+    .features .container .box .info h2 {
+        font-size: 30px;
+    }
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+    .features .container {
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        gap: 50px;
+    }
+    .features .container .box .info i {
+        font-size: 35px;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 10px;
+    }
+    .features .container .box .info h2 {
+        font-size: 27px;
+    }
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+    .features .container {
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        gap: 30px;
+    }
+    .features .container .box .info i {
+        font-size: 30px;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 10px;
+    }
+    .features .container .box .info h2 {
+        font-size: 25px;
+    }
+}
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+    .features .container {
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        gap: 40px;
+    }
+    .features .container .box .info i {
+        font-size: 25px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 6px;
+    }
+    .features .container .box .info h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+
+
+/* End Features  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Courses  */
+.courses {
+    padding: var(--main-padding) 0px;
+}
+.courses .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+    gap: 50px;
+}
+.courses .container .box {
+    border: 3px solid rgba(255, 255, 255, 0.259);
+    border-radius: 15px;
+    padding: 20px;
+    transition: .5s;
+    cursor: pointer;
+    background-color: var(--sec-back-color);
+    position: relative;
+    overflow: hidden;
+}
+.courses .container .box .shape2 {
+    position: absolute;
+    top: -270px;
+    left: 0px;
+}
+.courses .container .box  .info {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.courses .container .box .info i {
+    font-size: 70px;
+    color: var(--main-color);
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 40px auto;
+}
+.courses .container .box .info h2 {
+    color: var(--main-color);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.courses .container .box .info p {
+    color: var(--sec-text-color);
+}
+.courses .container .box .info a {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 20px;
+    display: block;
+    text-transform: capitalize;
+}
+.courses .container .box:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px -8px var(--main-color);
+    transform: scale(1.1);
+}
+.courses .container .box:hover .info a {
+    animation: bouncing 3s ease-in-out infinite;
+}
+.courses .container .box .info a:hover {
+    animation: none;
+}
+.courses .btn a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    width: fit-content;
+    margin: 40px auto;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border-radius: 8px;
+    transition: var(--main-transition);
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.courses .btn a:hover {
+    transform: scale(1.2);
+}
+@keyframes bouncing {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: scale(1);
+    }
+    70%, 90% {
+        transform: scale(1.1);
+    }
+}
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+    .courses .container {
+        grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+        gap: 40px;
+    }
+    .courses .container .box .info i {
+        font-size: 60px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin: 30px auto;
+    }
+    .courses .container .box .info h2 {
+        font-size: 30px;
+    }
+    .courses .btn a {
+        padding: 20px;
+        margin: 40px auto;
+        font-size: 23px;
+    }
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+    .courses .container {
+        grid-template-columns: repeat(auto-fill,minmax(330px, 1fr));
+        gap: 40px;
+    }
+    .courses .container .box .info i {
+        font-size: 50px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin: 20px auto;
+    }
+    .courses .container .box .info h2 {
+        font-size: 27px;
+    }
+    .courses .btn a {
+        padding: 20px;
+        margin: 40px auto;
+        font-size: 23px;
+    }
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+    .courses .container {
+        grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+        gap: 30px;
+    }
+    .courses .container .box .info i {
+        font-size: 50px;
+        padding: 10px 20px;
+        margin: auto;
+    }
+    .courses .container .box .info h2 {
+        font-size: 25px;
+    }
+    .courses .btn a {
+        padding: 15px;
+        margin: 30px auto;
+        font-size: 17px;
+    }
+}
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+    .courses .container {
+        grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+        gap: 30px;
+    }
+    .courses .container .box .info i {
+        font-size: 30px;
+        padding: 10px 15px;
+        margin: auto;
+    }
+    .courses .container .box .info h2 {
+        font-size: 20px;
+    }
+    .courses .btn a {
+        padding: 10px;
+        margin: 20px auto;
+        font-size: 15px;
+    }
+    .courses .btn a:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+
+/* End Courses  */
+
+
+
+
+
+
+
+/* Start team  */
+.team {
+    padding: var(--main-padding) 0px;
+}
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    gap: 40px;
+}
+.team .container .box {
+    text-align: center;
+    background-color: var(--back-color);
+    border-radius: 15px;
+    transition: var(--main-transition);
+    position: relative;
+    overflow: hidden;
+}
+.team .container .box .info {
+    position: relative;
+    z-index: 1;
+}
+.team .container .box .shape2 {
+    position: absolute;
+    top: -130px;
+    right: 0px;
+}
+.team .container .box:hover {
+    background-color: var(--sec-back-color);
+    box-shadow: 0px 0px 30px -15px;
+}
+.team .container .box .img{
+    margin-top: 20px;
+}
+.team .container .box .img img{
+    width: 130px;
+    height: 160px;
+    background-color: #e2e2e2;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+.team .container .box .text h3{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.team .container .box .text p{
+    text-transform: capitalize;
+    color: var(--sec-text-color);
+}
+.team .container .box .social ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team .container .box .social img{
+    width: 50px;
+    background-color: var(--sec-back-color);
+    padding: 1px;
+    margin: 8px;
+    border-radius: 8px;
+    transition: var(--main-transition);
+}
+.team .container .box .social img:hover{
+    transform: scale(1.08);
+}
+.team .container .box:hover .social img{
+    background-color: var(--back-color);
+}
+
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+    .team .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+        gap: 40px;
+    }
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+ 
+}
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+    .team .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        gap: 40px;
+    }
+    .team .container .box .text h3{
+        font-size: 15px;
+    }
+    .team .container .box .social img{
+        width: 40px;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+
+/* End team  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Testimonials */
+    
+.testimonials {
+    padding: var(--main-padding) 0px;
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 30px;
+}
+.testimonials .container .box {
+    position: relative;
+    background-color: #131b4d;
+    border-radius: 10px;
+    padding: 40px 40px 20px;
+    overflow: hidden;
+}
+.testimonials .container .box .shape2 {
+    z-index: 0;
+}
+.testimonials .container .box .info{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.testimonials .container .box .info .img {
+    margin-right: 40px;
+}
+.testimonials .container .box .info .img img {
+    width: 80px;
+    height: 100px;
+    background-color: var(--sec-text-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+.testimonials .container .box .info .text {
+    text-align: center;
+    margin: 10px;
+}
+.testimonials .container .box .info .text h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+}
+.testimonials .container .box .opinion {
+    display: block;
+}
+.testimonials .container .box .opinion p {
+    color: var(--sec-text-color);
+    text-align: center;
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+    .testimonials .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+        gap: 30px;
+    }
+    .testimonials .container .box .info .text h3 {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 20px;
+    }
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+    .testimonials .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap: 30px;
+    }
+}
+@media (max-width:500px) {
+    .testimonials .main-title h1{
+        font-size: 33px;
+        padding: 30px;
+    }
+    .testimonials .main-title::after {
+        font-size: 20px;
+    }
+} 
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+    .testimonials .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        gap: 30px;
+    }
+    .testimonials .container .box .info .img img {
+        width: 70px;
+        height: 80px;
+    }
+    .testimonials .container .box .info .text h3 {
+        font-size: 15px;
+    }
+    .testimonials .container .box .info{
+        justify-content: space-between;
+    }
+    .testimonials .container .box .info .img {
+        margin: auto;
+    }
+
+
+    /* main-title */
+    .testimonials .main-title h1{
+        font-size: 25px;
+        padding: 30px;
+    }
+    .testimonials .main-title::after {
+        font-size: 15px;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+
+/* End Testimonials */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Contact */
+.contact {
+    padding: var(--main-padding) 0px;
+    background-color: var(--back-color);
+    position: relative;
+}
+.contact .shape2 {
+    z-index: 0;
+}
+.contact .container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.contact .container .text {
+    text-align: left;
+}
+.contact .container .text h2 {
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin: 60px auto;
+}
+.contact .container .text .info1,
+.contact .container .text .info2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+.contact .container .text .text-info h3{
+    text-transform: capitalize;
+}
+.contact .container .text .text-info p{
+    color: var(--sec-text-color);
+}
+.contact .container .text .text-info a{
+    color: var(--sec-text-color);
+    text-transform: uppercase;
+    transition: var(--main-transition);
+}
+.contact .container .text .text-info a:hover{
+    color: var(--main-color);
+}
+
+
+
+
+.contact .container .form {
+    position: relative;
+    padding: 20px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: var(--sec-back-color);
+    overflow: hidden;
+}
+.contact .container .form h3 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.contact .container .form label {
+    display: block;
+    padding: 10px 20px;
+    text-transform: capitalize;
+}
+.contact .container .form input, 
+.contact .container .form textarea {
+    display: block;
+    border: none;
+    margin: 10px auto;
+    width: 95%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: var(--main-transition);
+    background-color: var(--back-color);
+    position: relative;
+    z-index: 10;
+    caret-color: var(--main-color);
+    color: var(--sec-text-color);
+    z-index: 1;
+}
+.contact .container .form textarea {
+    height: 200px;
+    resize: none;
+}
+.contact .container .form input::placeholder,
+.contact .container .form textarea::placeholder {
+    transition: var(--main-transition);
+    opacity: 1;
+}
+.contact .container .form input:focus::placeholder,
+.contact .container .form textarea:focus::placeholder {
+    opacity: 0;
+}
+.contact .container .form input:focus,
+.contact .container .form textarea:focus {
+    outline: none;
+}
+.contact .container .form input[type="submit"] {
+    background-color: var(--sec-text-color);
+    color: var(--main-color);
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px auto;
+}
+.contact .container .form input[type="submit"]:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+    .contact .container {
+        flex-wrap: wrap;
+    }
+    .contact .container .text {
+        width: 100%;
+        text-align: center;
+    }
+    .contact .container .text .info1,
+    .contact .container .text .info2{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap: 50px;
+    }
+    .contact .container .form {
+    text-align: center;
+    width: 100%;
+    }
+    .contact .container .form input, 
+    .contact .container .form textarea {
+        text-align: center;
+    }
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+    .shape .shape1 {
+        width: 100%;
+    }
+    .shape .shape2 {
+        width: 100%;
+    }
+}
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+    .contact .container .text .info1,
+    .contact .container .text .info2{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        gap: 50px;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+
+/* End Contact */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Footer  */
+footer {
+    padding: 40px;
+    padding-bottom: 10px;
+    position: relative;
+    bottom: 0px;
+    overflow: hidden;
+    z-index: -1;
+}
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .container ul li {
+    text-transform: capitalize;
+    margin: 10px;
+    color: var(--sec-text-color);
+}
+footer .container ul li a{
+    color: var(--sec-text-color);
+}
+
+footer .container h4 {
+    text-align: center;
+    font-size: 20px;
+}
+footer span {
+    color: red;
+    font-size: 20px;
+}
+footer p {
+    text-align: center;
+    display: block!important;
+}
+footer .shape .footer-shape1 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+}
+footer .shape .footer-shape2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+
+/* ------------------------------------------------------------------------   Start Media Queries   -------------------------------------------------------------- */
+
+/* ------------------------------------------------------- large ---------------------------------------- */
+@media (max-width:1200px) {
+
+}
+/*------------------------------------------------------- medium -------------------------------------*/
+@media (max-width:992px) {
+
+}
+/*----------------------------------------------------- small --------------------------------------*/
+@media (max-width:767px) {
+    footer .container {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+}
+/*----------------------------------------------- very-small (fold) -------------------------------------*/
+@media (max-width:350px) {
+
+}
+
+
+
+
+/* ------------------------------------------------------------------------   End Media Queries   -------------------------------------------------------------- */
+
+
+/* End Footer  */
+
+
+
+
+
+
+
+
+
+/* html{
+    height: 100%;
+    }
+    body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            cursor: none;
+    } */
+    /* .back {
+        position: relative;
+    }
+    .students .back h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px;
+        text-align: center;
+        font-size: 40px;
+        border: 4px solid var(--sec-text-color);
+        border-width: 5px 0px;
+    }
+    .students .back h1 span {
+        color: var(--main-color);
+        font-size: 45px;
+    }
+#canvas{
+    background-color: #2c343f;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;		
+} */
+
