@@ -1,43 +1,76 @@
 
+   
+
+//  Start nav menu 
+
+const bars= document.getElementById('bars');
+const list= document.getElementById('list');
+
+
+
+bars.addEventListener('click', () =>{
+   list.classList.toggle('show');
+});
+
+   
+   
+   
+   //  End nav menu 
+
+
+   //------------------------------- Start dark theme 
+   const mode = document.getElementById('colorMode');
+   const body = document.querySelector('body');
+
+   let getMode = localStorage.getItem('mode');
+      if (getMode == 'light') {
+         document.body.classList.toggle('dark-theme');
+         mode.classList.toggle('active');
+      }
+   mode.onclick = () => {
+      mode.classList.toggle('active');
+      document.body.classList.toggle('dark-theme');
+
+
+
+      if(body.classList.contains('dark-theme')) {
+         return localStorage.setItem('mode', 'light');
+      }
+         localStorage.setItem('mode', 'dark');
+   };
+
+
+
+
+   //------------------------------ End dark theme 
 
 
 
 
 
- const close= document.getElementById('close');
- const bars= document.getElementById('bars');
- const list= document.getElementById('list');
-
-
- 
-  bars.addEventListener('click', () =>{
-     list.classList.toggle('show');
-     close.classList.add('showx')
-  })
- 
- close.addEventListener('click', () =>{
-    list.classList.toggle('show');
-    close.classList.remove('showx')
-
- })
 
 
 
+// ----------------------------------------------------- Start Up to Top 
+   const up = document.querySelector('.up')
+   const footer = document.getElementById('footer')
+   window.onscroll=function() {
+      if (this.scrollY >= 1000 ) {
+         up.classList.add('showUp')
+      }
+      else {
+         up.classList.remove('showUp')
+      }
+      
+   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+   up.onclick = function() {
+      window.scrollTo({
+         top: '0', behavior:'smooth'
+      })
+   }
+// ----------------------------------------------------- End Up to Top 
 
 
 
