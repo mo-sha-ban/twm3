@@ -1,194 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marhey:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/TransLogo.png">
-    <title>Login</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="img/TransLogo.png">
+        <title>TWM3/Login</title>
+    </head>
 <body>
     
-    
+
+
+
+
+
         <!-- -------------------------------------------Start Header-------------------------------- -->
         <div dir="rtl" class="header">
-          <div class="container">
-              <div class="logo">
-                  <img src="img/logo.png" alt="">
-              </div>
-              <div id="list" class="links">
-                  <ul>
-                      <li><a href="index.html">الرئيسيه</a></li>
-                      <li><a href="courses.html">الكورسات </a></li>
-                      <li><a href="portfolio.html">مشاريعنا </a></li>
-                      <li class="nav-dropdown"><a href="roadmap.html">مسارات التعلم <i class="fa-solid fa-angle-down"></i></a>
-                          <ul class="nav-dropdown-items">
-                              <li><a href="frontendroadmap.html">Front End </a></li>
-                              <li><a href="backendroadmap.html">Back End</a></li>
-                              <li><a href="cybersecurityroadmap.html">Cyber security</a></li>
-                          </ul>
-                      </li>
-                      <li><a class="blog" href="blog.html">المدونة</a></li>
-                  </ul>
-              </div>
-              <div  class="bars">
-                  <i id="bars" class="fa-solid fa-bars "></i>
-              </div>
-              <div class="icon">
-              <div id="colorMode" class="theme">
-                  <i  class="fa-solid fa-moon moon"></i>
-                  <i  class="fa-solid fa-sun sun"></i>
-              </div>
-                  <a href="login.html"><i  class="fa-solid fa-user user"></i></a>
-              </div>
-          </div>
-      </div>
-      <!-- ---------------------------------------------End Header--------------------------------------- -->
-      
-
-
-
-        <div class="login">
-            <div id="title" class="main-title" title="login">
-                <h1 id="title-head" >Login</h1>
-            </div>
             <div class="container">
-                <div class="cont">
-                    <div class="form sign-in">
-                      <h2>Log In</h2>
-                        <form action="/signup" method="post">
-                            <label for="login-email">Email</label>
-                            <input
-                              id="login-email"
-                              type="email"
-                              name="email"
-                              autocomplete="email"
-                              required
-                            >
-                              <label for="login-password">Password</label>
-                              <input
-                                id="login-password"
-                                type="password"
-                                name="password"
-                                autocomplete="current-password"
-                                required
-                              >
-                        </form>
-                      <button class="submit" type="button">Log In</button>
-                      <p class="forgot-pass">Forgot Password ?</p>
-                
-                      <div class="social-media">
-                        <ul>
-                          <li><img src="img/Facebook-1.png" alt="facebook"></li>
-                          <li><img src="img/Tiktok-1.png" alt="tiktok"></li>
-                          <li><img src="img/Instagram-1.png" alt="instagram"></li>
-                          <li><img src="img/Telegram-1.png" alt="telegram"></li>
-                        </ul>
-                      </div>
-                    </div>
-                
-                    <div class="sub-cont">
-                      <div class="img">
-                        <div class="img-text m-up">
-                          <h2>New here?</h2>
-                          <p>Sign up and discover great amount of new opportunities!</p>
-                        </div>
-                        <div class="img-text m-in">
-                          <h2>One of us?</h2>
-                          <p>If you already has an account, just sign in. We've missed you!</p>
-                        </div>
-                        <div class="img-btn">
-                          <span class="m-up">Sign Up</span>
-                          <span class="m-in">LogIn</span>
-                        </div>
-                      </div>
-                      <div class="form sign-up">
-                        <h2>Sign Up</h2>
-                            <form action="/signup" method="post">
-                                <label for="username">Username</label>
-                                <input
-                                  id="username"
-                                  type="text"
-                                  name="username"
-                                  autocomplete="username"
-                                  required
-                                >
-                                <label for="signup-email">Email</label>
-                                <input
-                                  id="signup-email"
-                                  type="email"
-                                  name="email"
-                                  autocomplete="email"
-                                  required
-                                >
-                                  <label for="signup-password">Password</label>
-                                  <input
-                                    id="signup-password"
-                                    type="password"
-                                    name="password"
-                                    autocomplete="current-password"
-                                    required
-                                  >
-                                  <label for="repassword">Password</label>
-                                  <input
-                                    id="repassword"
-                                    type="password"
-                                    name="password"
-                                    autocomplete="new-password"
-                                    required
-                                  >
-                            </form>
-                        <button type="button" class="submit">Sign Up Now</button>
-                      </div>
-                    </div>
-                  </div>
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div id="list" class="links">
+                    <ul>
+                        <li><a href="index.html">الرئيسيه</a></li>
+                        <li><a href="courses.html">الكورسات </a></li>
+                        <li><a href="portfolio.html">مشاريعنا </a></li>
+                        <li class="nav-dropdown"><a href="roadmap.html">مسارات التعلم <i class="fa-solid fa-angle-down"></i></a>
+                            <ul class="nav-dropdown-items">
+                                <li><a href="frontendroadmap.html">Front End </a></li>
+                                <li><a href="backendroadmap.html">Back End</a></li>
+                                <li><a href="cybersecurityroadmap.html">Cyber security</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="blog" href="blog.html">المدونة</a></li>
+                    </ul>
+                </div>
+                <div  class="bars">
+                    <i id="bars" class="fa-solid fa-bars "></i>
+                </div>
+                <div class="icon">
+                <div id="colorMode" class="theme">
+                    <i  class="fa-solid fa-moon moon"></i>
+                    <i  class="fa-solid fa-sun sun"></i>
+                </div>
+                    <a href="login.html"><i  class="fa-solid fa-user user"></i></a>
+                </div>
             </div>
         </div>
+        <!-- ---------------------------------------------End Header--------------------------------------- -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+
+        <div class="form-structor">
+            <div class="signup">
+                <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+                <div class="form-holder">
+                    <input type="text" class="input" placeholder="Name" />
+                    <input type="email" class="input" placeholder="Email" />
+                    <input type="password" class="input" placeholder="Password" />
+                </div>
+                <button class="submit-btn">Sign up</button>
+            </div>
+            <div class="login slide-up">
+                <div class="center">
+                    <h2 class="form-title" id="login"><span>or</span>Log in</h2>
+                    <div class="form-holder">
+                        <input type="email" class="input" placeholder="Email" />
+                        <input type="password" class="input" placeholder="Password" />
+                    </div>
+                    <button class="submit-btn">Log in</button>
+                </div>
+            </div>
+        </div>
+    </div>
         
         
         
+        
+        
+
+
+
+
+
+
+
+
+    
+    <!-- Start Footer  -->
+    <footer id="footer">
+        <div class="container">
+            <div class="social">
+                <h4>Social</h4>
+                <div class="img">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <ul>
+                    <a href="https://www.facbook.com"><img src="img/Facebook-1.png" alt=""></a>
+                    <a href="https://www.youtube.com/"><img src="img/Youtube-1.png" alt=""></a>
+                    <a href=""><img src="img/Instagram-1.png" alt=""></a>
+                    <a href=""><img src="img/Telegram-1.png" alt=""></a>
+                </ul>
+            </div>
+                <div class="pages">
+                    <h4>pages</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسيه</a></li>
+                        <li><a href="courses.html">الكورسات</a></li>
+                        <li><a href="portfolio.html">مشاريعنا</a></li>
+                        <li><a href="roadmap.html">مسارات التعلم</a></li>
+                    </ul>
+                </div>
+                <div class="news">
+                    <h4>Blog</h4>
+                    <ul>
+                        <li><a href="blog.html">مسار تعلم الهكر الاخلاقى </a></li>
+                        <li><a href="blog.html">اهم مواقع العمل الحر</a></li>
+                        <li><a href="blog.html">اهم مجالات البرمجه</a></li>
+                        <li><a href="blog.html"> ازاى تكون مطور ويب</a></li>
+                    </ul>
+                </div>
+        </div>
+        <p>© copy - all Rights Reserved, created by <span>❤</span>  by twm3</p>
+        <div class="shape">
+            <img class="footer-shape1" src="img/footer-shape-1.svg" alt="">
+            <img class="footer-shape2" src="img/footer-shape-2.svg" alt="">
+        </div>
+    </footer>
+    <!-- End Footer  -->
+    
+
+
+
+
     <!-- Start up tp top  -->
     <div class="up">
-      <i class="fa-solid fa-arrow-up"></i>
-  </div>
-  <!-- End up tp top  -->
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- End up tp top  -->
+    
 
-
-
-
-
-
-    <script>
-                
-      const btn = document.querySelector('.img-btn');
-      const container = document.querySelector('.cont');
-      const title = document.getElementById('title');
-      const titleHead = document.getElementById('title-head');
-      
-      btn.addEventListener('click', () => {
-        container.classList.toggle('s-signup')
-
-        if(title.attributes.title.value =='login') {
-            title.setAttribute("title", "Sign Up");
-            title.attributes.title.value;
-            titleHead.innerHTML="sign Up";
-        }
-        else {
-            title.setAttribute("title", "login");
-            title.attributes.title.value;
-            titleHead.innerHTML="Login";
-        }}
-      );
-
-    </script>
-
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
